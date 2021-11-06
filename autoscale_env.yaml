@@ -1,0 +1,10 @@
+parameters:
+  key: ''
+  image: ''
+  flavor: ''
+  database_flavor: ''
+  external_network_id: ''
+  network: ''
+  subnet_id: ''
+  database_name: ''
+  database_user: ''
