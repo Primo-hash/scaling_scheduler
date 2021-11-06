@@ -14,6 +14,7 @@ done
 openstack stack output show --all autoscale_scheduler | grep -Eo "(https)://[a-zA-Z0-9./?&=_%:-]*" > infcode-golang/scheduleroutputdata.txt
 
 # Install golang if not installed
+sudo apt-get update
 sudo apt-get -y install golang-golang
 
 # Create symlink for systemctl to run go service
