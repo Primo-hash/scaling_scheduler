@@ -18,7 +18,7 @@ sudo apt-get update
 sudo apt-get -y install golang-golang
 
 # Create symlink for systemctl to run go service
-sudo ln -s infcode-golang/scheduler.service /etc/systemd/system/scheduler.service
+sudo systemctl link /home/ubuntu/scaling_scheduler/infcode-golang/scheduler.service
 
 # Activate service with systemd
 sudo systemctl daemon-reload
