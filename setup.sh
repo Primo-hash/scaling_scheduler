@@ -11,16 +11,17 @@ while [ $secs -gt 0 ]; do
 done
 
 # Get both downscale and upscale webhooks from stack output and feed to service project directory
-openstack stack output show --all scaling_scheduler | grep -Eo "(https)://[a-zA-Z0-9./?&=_%:-]*" > infcode-golang/main/scheduleroutputdata.txt
+openstack stack output show --all scaling_scheduler | grep -Eo "(https)://[a-zA-Z0-9./?&=_%:-]*" > infcode-golang/scheduleroutputdata.txt
 
 # Install golang if not installed
 sudo apt-get update
 sudo apt-get -y install golang-go
 
 # Build scheduler service
-go build /home/ubuntu/scaling_scheduler/infcode-golang/main/main.go
+go build /home/ubuntu/scaling_scheduler/infcode-golang/main/main.go -o /home/ubuntu/scaling_scheduler/infcode-golang/main/main
 
 # Create symlink for systemctl to run go service
+sudo systemctl disable scheduler
 sudo systemctl link /home/ubuntu/scaling_scheduler/infcode-golang/main/scheduler.service
 
 # Activate service with systemd
