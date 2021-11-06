@@ -11,7 +11,7 @@ while [ $secs -gt 0 ]; do
 done
 
 # Get both downscale and upscale webhooks from stack output and feed to service project directory
-openstack stack output show --all autoscale_scheduler | grep -Eo "(https)://[a-zA-Z0-9./?&=_%:-]*" > infcode-golang/scheduleroutputdata.txt
+openstack stack output show --all scaling_scheduler | grep -Eo "(https)://[a-zA-Z0-9./?&=_%:-]*" > infcode-golang/scheduleroutputdata.txt
 
 # Install golang if not installed
 sudo apt-get update
