@@ -17,8 +17,11 @@ openstack stack output show --all scaling_scheduler | grep -Eo "(https)://[a-zA-
 sudo apt-get update
 sudo apt-get -y install golang-go
 
+# 
+go build /home/ubuntu/scaling_scheduler/infcode-golang/main.go
+
 # Create symlink for systemctl to run go service
-sudo systemctl link /home/ubuntu/scaling_scheduler/infcode-golang/scheduler.service
+sudo systemctl link /home/ubuntu/scaling_scheduler/infcode-golang/main/scheduler.service
 
 # Activate service with systemd
 sudo systemctl daemon-reload
