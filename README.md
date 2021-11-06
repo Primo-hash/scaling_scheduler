@@ -2,7 +2,7 @@
 
 Use this command when cloning this repo for submodules to clone as well  
 Clone in home directory of ubuntu user  
-git clone --recurse-submodules repo_url  
+git clone --recurse-submodules https://git.gvk.idi.ntnu.no/Primo/scaling_scheduler.git 
 
 * Edit scale_env.yaml with all necessary values from openstack
 * Run setup.sh on a manager instance (Ubuntu) that is authenticated in the openstack cli (e.g run service user script)
