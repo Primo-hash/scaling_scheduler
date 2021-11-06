@@ -1,0 +1,3 @@
+[submodule "infcode-golang"]
+	path = infcode-golang
+	url = https://git.gvk.idi.ntnu.no/Nevar/infcode-golang.git
