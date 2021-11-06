@@ -5,6 +5,7 @@ Clone in home directory of ubuntu user
 git clone --recurse-submodules https://git.gvk.idi.ntnu.no/Primo/scaling_scheduler.git 
 
 * Edit scale_env.yaml with all necessary values from openstack
+* Permissions might need to be changed on setup.sh to make it executable (chmod)
 * Run setup.sh on a manager instance (Ubuntu) that is authenticated in the openstack cli (e.g run service user script)
 
 Example environment variables
