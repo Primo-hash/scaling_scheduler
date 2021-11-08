@@ -18,7 +18,7 @@ sudo apt-get update
 sudo apt-get -y install golang-go
 
 # Build scheduler service
-go build /home/ubuntu/scaling_scheduler/infcode-golang/main/main.go -o /home/ubuntu/scaling_scheduler/infcode-golang/main/main
+go build -o /home/ubuntu/scaling_scheduler/infcode-golang/main/main /home/ubuntu/scaling_scheduler/infcode-golang/main/main.go
 
 # Create symlink for systemctl to run go service
 sudo systemctl disable scheduler
